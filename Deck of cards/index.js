@@ -1,7 +1,7 @@
-const deck = [];
+let deck = [];
 
 function showDeck() {
-    document.getElementById('card').innerHTML = deck.length;
+    document.getElementById('card').innerHTML = `Cards Left in Deck : ${deck.length}`;
 }
 
 function initializeDeck(){
@@ -15,7 +15,7 @@ function initializeDeck(){
                })
            }
        }
-       return console.log(deck);
+       return  [alert('Deck is ready you can shuffle it'), console.log(deck)]
 }
 
 
@@ -42,10 +42,12 @@ function drawMultiple(){
     let x = drawCard(3);
     console.log(x);
     x.map((item,index) => {
-        let para = document.createElement("p");
+        let div = document.createElement("div");
+        let para = document.createElement("h2");
         let node = document.createTextNode( `${item.rank} of ${item.suit}`);
         para.appendChild(node);
-        document.getElementById('multipleCards').appendChild(para);
+        div.appendChild(para)
+        document.getElementById('multipleCards').appendChild(div);
     })
 }
 
@@ -55,5 +57,12 @@ function shuffle(){
         let j = Math.floor(Math.random() * (i+1));
         [deck[i],deck[j]] = [deck[j],deck[i]];
     }
-    return console.log(deck);
+    return  [console.log(deck),alert("Shuffled !")];
+}
+
+
+function resets() {
+    deck = [];
+    document.getElementById('multipleCards').innerHTML = '';
+    document.getElementById('card').innerHTML = '';
 }
