@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="index.js"></script>
+    <style>
+        .game{
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+        .deckOperations{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-row-gap: 10px;
+        }
+
+        .deckOperations > button{
+            padding : 10px;
+            cursor: pointer;
+        }
+        #multipleCards{
+            margin-top: 100px;
+            overflow-y: scroll;
+            height: 500px;
+
+        }
+
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">Playing Cards Operations</h1>
+<div class="game">
+    <div class="deckOperations">
+        <h1>Operations</h1>
+        <button onclick="initializeDeck()">Make Deck</button>
+        <button onclick="shuffle()">Shuffle</button>
+        <button onclick="drawCard()">Draw Single card</button>
+        <button onclick="drawMultiple()" >Teen patti draw</button>
+        <button onclick="showDeck()">Cards Left in Deck</button>
+        <button onclick="resets()">Reset</button>
+    </div>
+    <div class="results">
+        <div>
+            <h1 id="card"> </h1>
+        </div>
+        <div id="multipleCards"></div>
+    </div>
+</div>
+</body>
+</html>
