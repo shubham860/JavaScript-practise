@@ -41,8 +41,19 @@ function drawCard(n= 1) {
 function drawMultiple(){
     let x = drawCard(3);
     console.log(x);
-    x.map(item => {
-        document.getElementById('multipleCards').innerHTML = `<h3>${item.rank} of ${item.suit}</h3>`;
+    x.map((item,index) => {
+        let para = document.createElement("p");
+        let node = document.createTextNode( `${item.rank} of ${item.suit}`);
+        para.appendChild(node);
+        document.getElementById('multipleCards').appendChild(para);
     })
 }
 
+
+function shuffle(){
+    for(let i = deck.length-1;i>0;i--){
+        let j = Math.floor(Math.random() * (i+1));
+        [deck[i],deck[j]] = [deck[j],deck[i]];
+    }
+    return console.log(deck);
+}
