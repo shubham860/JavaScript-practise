@@ -7,7 +7,8 @@ document.body.appendChild(h1);
 document.body.prepend(container);
 
 
-const changeColor = function () {
+const changeColor = function (e) {
+    console.log(e);
     container.style.border = `10px solid ${this.style.backgroundColor}`;
     h1.innerText = this.style.backgroundColor;
     h1.style.color = this.style.backgroundColor;
