@@ -17,12 +17,13 @@ async function GreetToRelatives(greetWhom,greetMessgae,delay){
 //      console.log(v3);
 // }
 
-async function newFunction() {
-    const v1 = await GreetToRelatives('chacha', 'ram ram', 1000);
-    const v2 = await GreetToRelatives('mama', 'ram ram', 1000);
-    const v3 = await GreetToRelatives('uncle', 'ram ram', 1000);
-    const results = Promise.all([v1,v2,v3]);
-}
+// async function newFunction() {
+//     const v1 = await GreetToRelatives('chacha', 'ram ram', 1000);
+//     const v2 = await GreetToRelatives('mama', 'ram ram', 1000);
+//     const v3 = await GreetToRelatives('uncle', 'ram ram', 1000)
+//     const results =  await Promise.all([v1,v2,v3]);
+//     console.log(results)
+// }
 
 // async function newFunction() {
 //     const v1 =  GreetToRelatives('chacha', 'ram ram', 1000);
@@ -37,14 +38,14 @@ async function newFunction() {
 //     console.log(z3);
 // }
 
-// async function newFunction() {
-//     const v1 =  GreetToRelatives('chacha', 'ram ram', 1000);
-//     const v2 =  GreetToRelatives('mama', 'ram ram', 1000);
-//     const v3 =  GreetToRelatives('uncle', 'ram ram', 1000);
-//     const result = Promise.all([v1,v2,v3]);
-//     console.log(result);
-//
-// }
+async function newFunction() {
+    const v1 =  GreetToRelatives('chacha', 'ram ram', 1000);
+    const v2 =  GreetToRelatives('mama', 'ram ram', 1000);
+    const v3 =  GreetToRelatives('uncle', 'ram ram', 1000);
+    const result = await Promise.all([v1,v2,v3]);
+    console.log(result);
+
+}
 
 
 
